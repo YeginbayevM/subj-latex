@@ -1,0 +1,118 @@
+\documentclass[a4paper,12pt]{article}
+
+% 🔹 Базовые настройки
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{geometry}
+\geometry{top=2cm, bottom=2cm, left=2cm, right=2cm}
+
+% 🔹 Цвет фона и текста
+\usepackage{xcolor}
+\usepackage{pagecolor}
+\definecolor{lightgray}{gray}{0.95}
+\definecolor{darkblue}{rgb}{0,0.2,0.6}
+\pagecolor{lightgray}
+\color{black}
+
+% 🔹 Улучшенное форматирование
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\color{darkblue}}{}{0pt}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{darkblue}}{}{0pt}{}
+
+% 🔹 Колонтитулы
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{Описание дисциплины} — {\color{darkblue} \CourseName}}
+\setlength{\headheight}{14.5pt}
+
+% 🔹 Таблицы
+\usepackage{longtable, array, booktabs, colortbl, tabularx, makecell, multirow, hhline}
+\renewcommand{\arraystretch}{1.}
+
+% 🔹 Красивые блоки
+\usepackage{tcolorbox}
+\tcbset{colback=white, colframe=darkblue, arc=5pt}
+
+% 🔹 Дополнительное форматирование
+\usepackage{ragged2e} % Выравнивание текста
+\usepackage{ulem} % Подчеркивание
+\usepackage{setspace}
+\setstretch{0.9}
+\pagenumbering{gobble}
+
+\newcommand{\CourseName}{Пример курса}
+\newcommand{\CourseCode}{ABC123}
+\newcommand{\Semester}{1}
+\newcommand{\Credits}{3}
+\newcommand{\CourseDescription}{Краткое описание курса.}
+\newcommand{\CourseGoal}{Цель курса — изучение основ.}
+\newcommand{\LearningOutcomeOne}{Понимание базовых концепций.}
+\newcommand{\LearningOutcomeTwo}{Навыки практического применения.}
+\newcommand{\LearningOutcomeThree}{Анализ и решение задач.}
+
+\begin{document}
+
+{\color{darkblue}\section*{\CourseName}}
+\begin{tcolorbox}
+\textbf{Код курса:} \CourseCode\\
+\textbf{Семестр:} \Semester\\
+\textbf{Кредитная стоимость:} \Credits
+\end{tcolorbox}
+
+\subsection*{Краткое содержание}
+\CourseDescription
+
+\subsection*{Цель}
+\CourseGoal
+
+\subsection*{Результаты обучения}
+\begin{itemize}
+    \item \textbf{Навык 1:} \LearningOutcomeOne
+    \item \textbf{Навык 2:} \LearningOutcomeTwo
+    \item \textbf{Навык 3:} \LearningOutcomeThree
+\end{itemize}
+
+\subsection*{Содержание}
+\small
+\begin{table}[h]
+    \centering
+    \caption{Содержание курса}
+    \renewcommand{\arraystretch}{1.3}
+    \arrayrulecolor{black} % Цвет линий (чёрный)
+    \begin{tabular}{|c|p{6.5cm}|c|c|c|}
+        \hline
+        \rowcolor{darkblue!20} 
+        \textbf{№} & \textbf{Наименование тем} & \textbf{Лекции} & \textbf{Практики} & \textbf{СРО} \\
+        \hline
+        1 & Введение в тему & 2 & 4 & 10 \\
+        2 & Основные понятия & 1 & 2 & 5 \\
+        3 & Основные концепции & 2 & 4 & 12 \\
+        4 & Применение на практике & 2 & 4 & 14 \\
+        \hline
+    \end{tabular}
+    \end{table}
+
+\subsection*{Пререквизиты}
+Перечень необходимых знаний перед изучением курса.
+
+\subsection*{Литература}
+\textbf{Основные книги:}  
+1. Название книги 1  
+2. Название книги 2  
+
+\textbf{Дополнительные ресурсы:}  
+1. Статья/сайт 1  
+2. Статья/сайт 2  
+
+\subsection*{Координатор курса}
+Имя преподавателя
+
+\subsection*{Использование компьютеров}
+Программное обеспечение, используемое на курсе.
+
+\subsection*{Лабораторные работы}
+Перечень основных лабораторных работ.
+
+\end{document}
