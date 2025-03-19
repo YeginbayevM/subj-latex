@@ -1,1 +1,1 @@
-# My LaTeX Projectffff
+# My LaTeX Project
