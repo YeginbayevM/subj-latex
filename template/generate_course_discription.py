@@ -1,20 +1,17 @@
-import os
+import importlib.util
 import sys
 
-# Путь к виртуальному окружению
-venv_path = "/home/tyleks/subj-latex/template/myenv"  # Замените на ваш путь
+# Полный путь к psycopg2
+psycopg2_path = "/usr/lib/python3/dist-packages/psycopg2"
 
-# Активация виртуального окружения
-if not os.path.exists(venv_path):
-    print(f"Виртуальное окружение не найдено: {venv_path}")
-    sys.exit(1)
+# Загрузка модуля
+spec = importlib.util.spec_from_file_location("psycopg2", psycopg2_path + "/__init__.py")
+psycopg2 = importlib.util.module_from_spec(spec)
+sys.modules["psycopg2"] = psycopg2
+spec.loader.exec_module(psycopg2)
 
-activate_script = os.path.join(venv_path, "bin", "activate_this.py")
-with open(activate_script) as f:
-    exec(f.read(), {"__file__": activate_script})
-
-# Теперь можно импортировать psycopg2
-import psycopg2
+# Теперь можно использовать psycopg2
+print(psycopg2.__version__)
 
 # Параметры подключения к базе данных
 db_params = {
