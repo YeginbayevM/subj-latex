@@ -1,17 +1,4 @@
-import importlib.util
-import sys
-
-# Полный путь к psycopg2
-psycopg2_path = "/usr/lib/python3/dist-packages/psycopg2"
-
-# Загрузка модуля
-spec = importlib.util.spec_from_file_location("psycopg2", psycopg2_path + "/__init__.py")
-psycopg2 = importlib.util.module_from_spec(spec)
-sys.modules["psycopg2"] = psycopg2
-spec.loader.exec_module(psycopg2)
-
-# Теперь можно использовать psycopg2
-print(psycopg2.__version__)
+import psycopg2
 
 # Параметры подключения к базе данных
 db_params = {
