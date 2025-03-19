@@ -107,7 +107,35 @@
 \Prerequisites
 
 \section*{Содержание курса}
-\input{/home/tyleks/subj-latex/template/courses_tables/course_content_1.tex} % Вставляем таблицу из отдельного файла
+\begin{table}[H] % Используем [H] для фиксации таблицы
+    \centering
+    \renewcommand{\arraystretch}{1.1} % Уменьшаем межстрочный интервал
+    \arrayrulecolor{darkblue} % Зеленые линии таблицы
+    \rowcolors{2}{darkblue!10}{white} % Чередование цветов строк
+    \fontsize{9}{11}\selectfont % Уменьшаем размер шрифта
+    \begin{tabular}{|c|p{5.5cm}|c|c|c|}
+        \hline
+        \rowcolor{darkblue!20} 
+        \textbf{№} & \textbf{Наименование тем} & \textbf{Лекции} & \textbf{Практики} & \textbf{СРО} \\
+        \hline
+        1 & Введение в Computer Science и основы программирования & 1 & 2 & 7 \\
+        2 & Основы языка C и работа с интерфейсом командной строки (CLI) & 1 & 2 & 9 \\
+        3 & Процесс разработки, массивы, строки, основы криптографии & 2 & 4 & 12 \\
+        4 & Основы алгоритмов: поиск, сортировка и рекурсия & 2 & 4 & 10 \\
+        5 & Управление памятью: указатели, стек и куча & 2 & 4 & 8 \\
+        6 & Структуры данных & 1 & 2 & 8 \\
+        7 & Основы языков программирования & 1 & 2 & 7 \\
+        8 & Основы SQL & 1 & 2 & 9 \\
+        9 & Введение в веб-разработку (HTML, CSS, JS) & 1 & 2 & 9 \\
+        10 & Основы операционных систем & 1 & 2 & 7 \\
+        11 & Введение в компьютерную графику & 1 & 2 & 7 \\
+        12 & Современный искусственный интеллект & 1 & 2 & 8 \\
+        \hline
+        \rowcolor{darkblue!20} 
+        \textbf{Всего} & & \LectureCount & \PracticeCount & \SelfLearnCount \\
+        \hline
+    \end{tabular}
+\end{table}
 
 \section*{Литература}
 \begin{tcolorbox}[colback=darkblue!10, colframe=darkblue, sharp corners=south, boxrule=0.5mm]
